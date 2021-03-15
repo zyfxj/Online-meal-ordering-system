@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>订餐界面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Order.css">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+</style>
+<body>
+
+<div class="header">
+    <div class="background">
+        <h1 style="color: black">网上订餐系统</h1>
+    </div>
+</div>
+
+<div class="topnav">
+    <a href="../Login_and_register/Login.html">退出</a>
+    <a href="../menu/menu.html">菜品浏览</a>
+    <a href="../user.html">主界面</a>
+    <a href="../PersonalInfo/PersonalInfo.jsp">个人信息</a>
+    <a href="../contact/contact.html">留言评论</a>
+
+</div>
+<div class="row">
+    <div class="column">
+        <table id="customers">
+            <tr>
+                <th class="dish">菜名</th>
+                <th class="price">价格</th>
+                <th class="number">数量</th>
+                <th class="others">备注</th>
+            </tr>
+            <tr>
+                <td class="dish">待输入</td>
+                <td class="price">待输入</td>
+                <td class="number">待输入</td>
+                <td><input type="text" id="introduce1"></td>
+            </tr>
+            <tr>
+                <td class="dish">待输入</td>
+                <td class="price">待输入</td>
+                <td class="number">待输入</td>
+                <td><input type="text" id="introduce2" ></td>
+            </tr>
+            <tr>
+                <td class="dish">待输入</td>
+                <td class="price">待输入</td>
+                <td class="number">待输入</td>
+                <td><input type="text" id="introduce3" ></td>
+            </tr>
+            <tr>
+                <td class="dish">待输入</td>
+                <td class="price">待输入</td>
+                <td class="number">待输入</td>
+                <td><input type="text" id="introduce4" ></td>
+            </tr>
+            <tr>
+                <td class="dish">待输入</td>
+                <td class="price">待输入</td>
+                <td class="number">待输入</td>
+                <td><input type="text" id="introduce5" ></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="footer">
+    <table id="customersy">
+    <tr>
+        <td class="dish">订单总金额：</td>
+        <td >总金额数</td>
+    </tr>
+    <tr>
+        <td>我的送餐地址：</td>
+        <td><input type="text" id="location"></td>
+    </tr>
+    </table>
+</div>
+    <button class="button" style="vertical-align:middle"><span>提交订单</span></button>
+</body>
+</html>

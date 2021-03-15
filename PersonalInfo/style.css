@@ -1,0 +1,200 @@
+
+@import "https://stas-melnikov.ru/r-blocks/r-button.css";
+@import "https://stas-melnikov.ru/r-blocks/r-link.css";
+
+
+.ai-element{
+	--uiaiElementDisplay: var(--aiElementDisplay, inline-flex);	
+	--uiaiElementTextColor: var(--aiElementTextColor);
+	--uiaiElementTextColorHover: var(--aiElementTextColorHover);	
+
+	display: var(--uiaiElementDisplay);
+	color: var(--uiaiElementTextColor);
+	position: relative;
+	overflow: hidden;
+}
+
+.ai-element__label{
+	display: block;
+}
+
+.ai-element_padding-all{
+	--uiaiElementLineWeight: var(--aiElementLineWeight, 2px);
+	--uiaiElementLineColor: var(--aiElementLineColor, #000);
+	--uiaiElementPadding: var(--aiElementPadding, 5px);
+
+	padding: var(--uiaiElementPadding);
+}
+
+.ai-element_padding-all::before, 
+.ai-element_padding-all::after{
+	width: 100%;
+	height: var(--uiaiElementLineWeight);
+	left: 0;
+}
+
+.ai-element_padding-all::before{
+	top: 0;
+}
+
+.ai-element_padding-all::after{
+	bottom: 0;
+}
+
+.ai-element_padding-all .ai-element__label::before,
+.ai-element_padding-all .ai-element__label::after{
+	width: var(--uiaiElementLineWeight);
+	height: 100%;
+	top: 0;
+}
+
+.ai-element_padding-all .ai-element__label::before{
+	left: 0;
+}
+
+.ai-element_padding-all .ai-element__label::after{
+	right: 0;
+}
+
+.ai-element_padding-all::before,
+.ai-element_padding-all::after,
+.ai-element_padding-all .ai-element__label::before,
+.ai-element_padding-all .ai-element__label::after{
+	content: "";     
+	background-color: var(--uiaiElementLineColor);
+	position: absolute; 
+	opacity: 1;
+
+	will-change: transform, opacity;
+	transition-property: opacity, -webkit-transform;
+	transition-property: transform, opacity;
+	transition-property: transform, opacity, -webkit-transform;
+}
+
+.ai-element_padding-all:hover::before,
+.ai-element_padding-all:hover::after,
+.ai-element_padding-all:hover .ai-element__label::before,
+.ai-element_padding-all:hover .ai-element__label::after{
+	opacity: 0;
+}
+
+/* ai-element_padding-bottom */ 
+
+.ai-element_padding-bottom{
+	--uiaiElementLineWeight: var(--aiElementLineWeight, 2px);
+	--uiaiElementLineColor: var(--aiElementLineColor, #000);	
+
+	padding-bottom: var(--uiaiElementLineWeight);	
+	position: relative;
+}
+
+.ai-element_padding-bottom::after{
+	content: "";
+	width: 100%;
+	height: var(--uiaiElementLineWeight);
+	background-color: var(--uiaiElementLineColor);
+
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.ai-element_bg {
+	--uiaiElementLineColor: var(--aiElementLineColor, #000);	
+	--uiaiElementTextColor: var(--aiElementTextColor, #fff);
+	--uiaiElementTextColorHover: var(--aiElementTextColorHover, #000);
+	--uiaiElementPadding: var(--aiElementPadding, 5px);
+
+	padding: var(--uiaiElementPadding);
+	transition: color .3s ease-out;
+}
+
+.ai-element_bg::before, 
+.ai-element_bg::after{
+	content: "";
+	background-color: var(--uiaiElementLineColor);	
+	opacity: 1;
+	position: absolute;
+
+	transition: opacity .35s ease-out .03s, -webkit-transform .35s ease-out;
+
+	transition: transform .35s ease-out, opacity .35s ease-out .03s;
+
+	transition: transform .35s ease-out, opacity .35s ease-out .03s, -webkit-transform .35s ease-out;
+}
+
+.ai-element_bg .ai-element__label{
+	position: relative;
+	z-index: 2;
+}
+
+.ai-element_bg:hover::before, 
+.ai-element_bg:hover::after{
+	opacity: 0;
+	transition-delay: 0s;
+}
+
+.ai-element_bg:hover{
+	color: var(--uiaiElementTextColorHover);
+}
+
+/* ai-element_text */ 
+
+.ai-element_text::before{
+	content: attr(data-ai-element-text);
+	color: var(--uiaiElementTextColorHover);
+	position: absolute;
+}
+
+.ai-element_text::before, 
+.ai-element_text .ai-element__label{
+	transition-property: -webkit-transform;
+	transition-property: transform;
+	transition-property: transform, -webkit-transform;
+	transition-timing-function: cubic-bezier(.86, .6, .08, 1.01); 
+	transition-duration: .4s;
+}
+
+.ai-element_text:hover::before,
+.ai-element_text:hover .ai-element__label{
+	transition-duration: .3s;
+}
+
+.ai-element9::before,
+.ai-element9::after{
+	width: 51%;
+	height: 100%;
+	top: 0; 
+	-webkit-transform: translate3d(0, 0, 0); 
+	        transform: translate3d(0, 0, 0);
+}
+
+.ai-element9::before{
+	left: 0;
+}
+
+.ai-element9::after{
+	right: 0;
+}
+
+.ai-element9:hover::before{
+	-webkit-transform: translate3d(-100%, 0, 0) rotate(-45deg);
+	        transform: translate3d(-100%, 0, 0) rotate(-45deg);
+}
+
+.ai-element9:hover::after{
+	-webkit-transform: translate3d(100%, 0, 0) rotate(-45deg);
+	        transform: translate3d(100%, 0, 0) rotate(-45deg);	
+}
+
+.ai-element{
+	--aiElementPadding: 10px 15px;
+	--aiElementLineWeight: 5px;
+	--aiElementLineColor: #333;
+	--aiElementTextColor: #ffffff;
+	--aiElementTextColorHover: #243aab;
+}
+
+.ai-element_bg{
+	--aiElementTextColor: #fff;
+}

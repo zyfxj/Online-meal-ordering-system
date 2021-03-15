@@ -1,0 +1,138 @@
+/*
+ * 版权所有(C)，郑翊风，2020，所有权利保留。
+ *
+ * 项目名： Myjava_1
+ * 文件名： user.css
+ * 模块说明：
+ * 修改历史:
+ * 2020-7-22 - 郑翊风 - 创建。
+ */
+body {
+    margin: 0;
+    font-family: "Times New Roman";
+}
+.header {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+.topnav {
+    overflow: hidden;
+    background-color: rgba(244, 164, 96, 1);
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.topnav a:hover {
+    background-color: white;
+    color: black;
+}
+.topnav a.active{
+    background-color: white;
+    color: black;
+}
+.topnav input[type=text]{
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 16px;
+}
+.footer {
+    background-color: rgba(244, 164, 96, 1);
+    margin-top: 60px;
+    height: 200px;
+}
+.leftcolumn {
+    float: left;
+    width:  43%;
+    margin-left: 90px;
+}
+/* 右侧栏 */
+.rightcolumn {
+    float: right;
+    width: 43%;
+    margin-right: 90px;
+}
+
+/* 列后面清除浮动 */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.card_1 {
+    background-color: white;
+    height: 500px;
+    margin-top: 30px;
+}
+.card_2 {
+    background-color: white;
+    height: 300px;
+    margin-top: 30px;
+}
+.card_3 {
+    background-color: rgba(244, 164, 96, 0.65);
+    height: 500px;
+}
+input[type=button]{
+    background-color: rgba(244, 164, 96, 1);
+    border: none;
+    border-radius: 6px;
+    width: 80px;
+    height: 40px;
+    cursor:pointer;
+    color: white;
+}
+
+div.img {
+    border: 1px solid #ccc;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

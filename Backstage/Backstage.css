@@ -1,0 +1,116 @@
+/*
+ * 版权所有(C)，郑翊风，2020，所有权利保留。
+ *
+ * 项目名： Myjava_1
+ * 文件名： Backstage.css
+ * 模块说明：
+ * 修改历史:
+ * 2020-7-25 - 郑翊风 - 创建。
+ */
+
+body {
+    margin: 0;
+    font-family: "Times New Roman";
+}
+.header {
+    padding: 20px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 0;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+input[type=button].zyf{
+    background-color: rgba(244, 164, 96, 1);
+    border: none;
+    border-radius: 6px;
+    width: 80px;
+    height: 40px;
+    cursor:pointer;
+    color: white;
+}
+
+table{
+    width:50%;
+    position:relative;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border:1px solid gray;
+}
+th{
+    background-color: rgba(244, 164, 96, 1);
+    height:2.5em;
+}
+.tdone{
+    width:10%;
+}
+.tdtwo{
+    width:20%;
+}
+.tdthree{
+    width:20%;
+}
+.tdfour{
+    width:20%;
+}
+.tdfive{
+    width:20%;
+}
+.tdsix{
+    width:10%;
+}
+td{
+    height:2em;
+    text-align: center;
+    border:1px solid #ccc;
+}
+.num{
+    display:inline-block;
+    width:3em;
+}
+input{
+    height:2em;
+}
+.talast{
+    text-align: left;
+}

@@ -1,0 +1,72 @@
+<!--
+  ~ 版权所有(C)，郑翊风，2020，所有权利保留。
+  ~
+  ~ 项目名： Myjava_1
+  ~ 文件名： Backstage.html
+  ~ 模块说明：
+  ~ 修改历史:
+  ~ 2020-7-25 - 郑翊风 - 创建。
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台菜品管理</title>
+    <link rel="stylesheet" href="Backstage.css">
+    <script type="text/javascript" src="Backstage.js"></script>
+</head>
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">订单管理</a>
+        <a href="Backstage.html">菜品管理</a>
+        <a href="#">会员管理</a>
+        <a href="#">关于</a>
+    </div>
+    <div id="main">
+        <div class="header">
+            <span style="font-size:25px;cursor:pointer" onclick="openNav();">&#9776; 菜单目录</span>
+            <h1 style="color: black; text-align: center">
+                菜狗网上订餐后台管理
+            </h1>
+        </div>
+
+
+        <h2 style="text-align: center; padding-top: 40px">菜品一览</h2>
+
+        <div style="text-align:center">
+            <label style="margin: 10px">请输入菜品:</label>
+            <input class="zyf_1" style="margin: 5px" type="text"><br>
+            <label style="margin: 10px">请输入菜金:</label>
+            <input class="zyf_2" style="margin: 5px" type="text"><br>
+            <input class="zyf" style="margin-top: 10px; margin-bottom: 10px" name="添加" type="button" value="添加" onclick="add_shoppingcar(this)">
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                <th>商品</th>
+                <th>金额</th>
+                <th>删除</th>
+            </tr>
+            </thead>
+
+            <tbody id="goods">
+            </tbody>
+
+            <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tfoot>
+        </table>
+        <div style="text-align:center">
+            <input class="zyf" style="margin-top: 10px; margin-bottom: 10px" name="保存" type="button" value="保存" onclick="window.location.href='后台菜品管理.html'"
+        </div>
+    </div>
+</body>
+</html>

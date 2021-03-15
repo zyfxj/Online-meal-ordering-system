@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<%
+String path = request.getRequestURI();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
+%>
+<base href="<%=basePath%>">
+<head>
+    <meta charset="utf-8">
+    <title>登录</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+        }
+        body{
+            background-image: url("System/Login_and_register/photo/login2.jpg");
+        }
+        #content {
+            margin: 150px auto;
+            width: 100%;
+            height: 460px;
+            border: 1px transparent solid;
+        }
+
+        #box {
+            margin: 50px auto;
+            width: 30%;
+            height: 360px;
+            background-color: #fff;
+            text-align: center;
+            border-radius: 15px;
+            border: 2px #fff solid;
+            /*box-shadow: 10px 10px 5px #000000;*/
+        }
+
+        .title {
+            line-height: 58px;
+            margin-top: 20px;
+            font-size: 36px;
+            color: #000;
+            height: 58px;
+        }
+
+        #box:hover {
+            border: 2px #fff solid;
+        }
+
+        .input {
+            margin-top: 20px;
+        }
+
+        input {
+            margin-top: 5px;
+            outline-style: none;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 13px 14px;
+            width: 70%;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: "Microsoft soft";
+        }
+
+        button {
+            margin-top: 20px;
+            border: none;
+            color: #000;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            border-radius: 15px;
+            background-color: #dadef6;
+        }
+        button:hover{
+            background-color: #24f15e;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+<script language="javascript">
+    function sel(){
+        document.thisform.submit();
+    }
+    function log() {
+        window.location.href="/web_war_exploded/aaa/bbb/Judge"
+    }
+    function login() {
+        window.location.href="../Login_and_register/register.jsp"
+    }
+    function managelogin() {
+        window.location.href='../Managerment/Managent/Login.html';
+    }
+</script>
+
+<div id="content">
+    <div id="box">
+        <div class="title"><b>网上订餐系统</b></div>
+        <form action="/web_war_exploded/aaa/bbb/Judge" method="get">
+            <div class="input">
+                <input type="text" name="username" placeholder="用户ID">
+                <br>
+                <input type="password" name="password" placeholder="密码">
+                <br>
+                <input type="password" name="password1" placeholder="再次输入">
+                <br>
+                <input type="submit" value="提交" onclick="login()">
+                <button type="button" onclick="managelogin()"><b>管理员登陆</b></button>
+                <button type="button" onclick="login()"><b>注册</b></button>
+            </div>
+        </form>
+    </div>
+</div>
+<%
+String username= request.getParameter("username");
+String password=request.getParameter("password");
+%>
+</body>
+<script type="text/javascript">
+
+    /**function getuser() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var password1 = document.getElementById("password1").value;
+        testing(username, password,password1)
+        //alert("username:"+username+"\n"+"assword:"+password);
+    }**/
+
+    /**
+     function testing(username, password, password1) {
+        var tmp = username && password;
+        String i = (String) request.getAttribute("i");
+        if(i!="1"){
+        %>
+            return 0;
+        }%>
+        else{
+            alert("username:" + username + "\n" + "password:" + password);
+            window.location.href='../firstpage.jsp'
+        }
+        //var name =2017302833;
+        /**
+         if (tmp == "") {
+            alert("请填写完整信息");
+            return 0;
+        }
+         /**
+         if (username!=name) {
+            alert("用户名不存在，如无账号，请前往注册")
+            return 0;
+        }
+         if (password!=key)
+         {
+            alert("密码错误");
+        }else if(password != password1){
+            alert("两次输入的密码不一样");
+        }else{
+            alert("username:" + username + "\n" + "password:" + password);
+            window.location.href='../user.html'
+        }
+
+    }**/
+</script>
+</html>

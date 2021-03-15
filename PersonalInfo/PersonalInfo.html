@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>个人中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="yonghuzhongxin.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @media (min-width: 1200px){
+            .secs{
+                display: grid;
+                grid-template-columns: repeat(3, minmax(240px, 1fr));
+            }
+        }
+
+        .section{
+            display: flex;
+            text-align: center;
+            font-size: 17px;
+        }
+        .section__item{
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>网上订餐系统欢迎您！</h1>
+</div>
+
+<div class="topnav">
+    <div style="text-align:center;clear:both; padding: 0px;">
+        <div class="section" style="padding: 0px">
+            <div class="section__item" style="padding: 0px">
+                <div class="section__box" style="padding: 0px 0px 0px 0px">
+                    <a href="../contact/contact.html" class="r-link ai-element ai-element_bg ai-element9" style="margin:0px;padding:0px 15px 13px 15px">
+                        <span class="ai-element__label" style="padding: 10px 0px 0px 5px">申请评论</span>
+                    </a>
+                    <a href="../menu/menu.html" class="r-link ai-element ai-element_bg ai-element9" style="margin:0px 150px 0px 180px;padding:0px 15px 13px 15px">
+                        <span class="ai-element__label" style="padding: 10px 0px 0px 5px">选择菜品</span>
+                    </a>
+                    <a href="../user.html" class="r-link ai-element ai-element_bg ai-element9" style="margin:0px 140px 0px 150px;padding:0px 15px 13px 15px">
+                        <span class="ai-element__label" style="padding: 10px 0px 0px 5px">主界面</span>
+                    </a>
+                    <a href="../order/Order.html" class="r-link ai-element ai-element_bg ai-element9" style="margin:0px 150px 0px 190px;padding:0px 15px 13px 15px">
+                        <span class="ai-element__label" style="padding: 10px 0px 0px 5px">订单查询</span>
+                    </a>
+                    <a href="../Login_and_register/Login.html" class="r-link ai-element ai-element_bg ai-element9" style="margin:0px 0px 0px 93px;padding:0px 15px 13px 15px">
+                        <span class="ai-element__label" style="padding: 10px 0px 0px 5px">注销</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="column side">
+        <iframe src="index.html" width="100%" height="760px" frameborder="0" style="margin:0px; padding: 0px"></iframe>
+    </div>
+
+    <div class="column middle" style="margin-left: 0px">
+        <table class="information" >
+            <tr>
+                <td class="username" width="100px">用户名：</td>
+                <td><input type="text" class="content"></td>
+            </tr>
+            <tr>
+                <td class="userId" width="100px">用户账号：</td>
+                <td><input type="text" class="content"></td>
+            </tr>
+            <tr>
+                <td class="keyvalue" width="100px">登陆密码：</td>
+                <td><input type="text" class="content"></td>
+            </tr>
+            <tr>
+                <td class="telphone" width="100px">联系方式：</th>
+                <td><input type="text" class="content"></td>
+            </tr>
+            <tr>
+                <td class="e-mail" width="100px">电子邮箱：</td>
+                <td><input type="text" class="content"></td>
+            </tr>
+            <tr>
+                <td class="address" width="100px">配送地址：</td>
+                <td><input type="text" class="content"></td>
+            </tr>
+        </table>
+        <div style="text-align:center;clear:both">
+            <div class="section">
+                <div class="section__item">
+                    <div class="section__box">
+                        <button class="r-button ai-element ai-element_bg ai-element9" style="margin: 50px 80px 100px 120px;padding:20px 30px 20px 30px">
+                            <span class="ai-element__label">保存</span>
+                        </button>
+                        <button class="r-button ai-element ai-element_bg ai-element9" style="margin: 50px 0px 100px 20px;padding:20px 30px 20px 30px">
+                            <span class="ai-element__label">取消</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p>此处插入图片</p>
+</div>
+
+</body>
+</html>
